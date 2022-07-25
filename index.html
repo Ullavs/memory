@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Memory game</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="css/game.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <main>
+      <h1>Memory Game</h1>
+      <form id="game-form">
+        <div class="select-size">
+          <label for="field-size">Kies een speelveld:</label>
+          <select id="field-size" name="field-size" required>
+            <option value="4" selected>4 x 4</option>
+            <option value="5">5 x 5</option>
+            <option value="6">6 x 6</option>
+          </select>
+        </div>
+
+        <button type="submit">Start game</button>
+      </form>
+      <div class="scoreboard">
+        <div>
+          <span>Pogingen:</span>
+          <span class="total-attempts">0</span>
+        </div>
+        <div>
+          <span>Matches:</span>
+          <span class="successful-attempts">0</span>
+        </div>
+        <div>
+          <span>Verstreken tijd:</span>
+          <span class="play-time">0:00</span>
+        </div>
+        <div>
+          <span>Snelste tijd:</span>
+          <span class="highscore"></span>
+        </div>
+      </div>
+      <div id="field"></div>
+    </main>
+
+    <script src="js/memory.js" type="module"></script>
+  </body>
+</html>
