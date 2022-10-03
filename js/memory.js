@@ -104,7 +104,7 @@ function onClickCard(event) {
     return;
   }
 
-  // Wanneer het kaartje al een match ius, dan willen we niet verder luisteren naar de click
+  // Wanneer het kaartje al een match is, dan willen we niet verder luisteren naar de click
   if (clickedCard.classList.contains("match")) {
     return;
   }
@@ -302,7 +302,7 @@ function startGame(event) {
 
 // Functie die wordt aangeroepen wanneer het spel eindigt
 function endGame() {
-  // Vraag de huidige hightscore op
+  // Vraag de huidige highscore op
   const boardSize = fieldSize.value;
   const highscore = localStorage.getItem(`highscore${boardSize}`);
 
